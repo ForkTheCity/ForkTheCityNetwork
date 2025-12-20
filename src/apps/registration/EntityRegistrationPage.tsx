@@ -48,7 +48,7 @@ const EntityRegistrationPage: React.FC = () => {
 
   useEffect(() => {
     if (!currentMember) {
-      navigate('/registration/signup');
+      navigate('/microsite/registration/signup');
     }
   }, [currentMember, navigate]);
 

@@ -34,12 +34,12 @@ The Microsite Template empowers communities to:
 | Route | Purpose | Authentication |
 |-------|---------|----------------|
 | `/microsite` | Main microsite page | Optional |
-| `/login` | Member login | Public |
-| `/registration/signup` | Member registration (Step 1) | Public |
-| `/registration/volunteer` | Volunteer profile setup (Step 2) | Required |
-| `/registration/entity` | Organization/business registration (Step 3) | Required |
-| `/posts/create` | Create new post with categories | Required |
-| `/posts/:postId` | View post details and responses | Optional |
+| `/microsite/login` | Member login | Public |
+| `/microsite/registration/signup` | Member registration (Step 1) | Public |
+| `/microsite/registration/volunteer` | Volunteer profile setup (Step 2) | Required |
+| `/microsite/registration/entity` | Organization/business registration (Step 3) | Required |
+| `/microsite/posts/create` | Create new post with categories | Required |
+| `/microsite/posts/:postId` | View post details and responses | Optional |
 
 ---
 
@@ -399,12 +399,12 @@ For complete setup, see **[Quick Start in main README](./README.md#quick-start)*
 ### Quick Test Scenarios
 
 **1. Registration Flow**
-- Visit `/registration/signup`
+- Visit `/microsite/registration/signup`
 - Create account → Complete volunteer profile (optional) → Register entity (optional)
 - Verify user menu shows avatar with initials
 
 **2. Create Post**
-- Visit `/posts/create`
+- Visit `/microsite/posts/create`
 - Fill title, description, select/create category, upload image
 - Verify post appears in Issues section
 
@@ -473,7 +473,7 @@ localStorage.clear()
 
 | Issue | Solution |
 |-------|----------|
-| "Loading..." forever on microsite | Need to be logged in - visit `/registration/signup` |
+| "Loading..." forever on microsite | Need to be logged in - visit `/microsite/registration/signup` |
 | Can't create custom category | Check if similar category exists (>70% similarity) |
 | Images not uploading | Max 500KB, check localStorage isn't full |
 | Lost data after refresh | localStorage persists unless manually cleared |
@@ -530,7 +530,7 @@ npm run dev
 ```
 
 1. **Visit**: `http://localhost:5173/microsite` (redirects to signup)
-2. **Sign up**: `/registration/signup` - Fill name, email, password
+2. **Sign up**: `/microsite/registration/signup` - Fill name, email, password
 3. **Volunteer** (optional): Add skills, availability
 4. **Register entity** (optional): Organization or Business with logo
 5. **Create posts**: Custom categories, upload images, respond to others
@@ -540,16 +540,16 @@ npm run dev
 | URL | Description |
 |-----|-------------|
 | `/microsite` | Main microsite (auth required) |
-| `/registration/signup` | Create account |
-| `/login` | Sign in |
-| `/posts/create` | Create post |
-| `/posts/:postId` | View post detail |
+| `/microsite/registration/signup` | Create account |
+| `/microsite/login` | Sign in |
+| `/microsite/posts/create` | Create post |
+| `/microsite/posts/:postId` | View post detail |
 
 ### Troubleshooting
 
 | Issue | Fix |
 |-------|-----|
-| Stuck on "Loading..." | Visit `/registration/signup` to log in |
+| Stuck on "Loading..." | Visit `/microsite/registration/signup` to log in |
 | Can't create category | Similar category exists (>70% match) |
 | Image won't upload | Max 500KB, localStorage may be full |
 | Want fresh start | Run `localStorage.clear()` in console |

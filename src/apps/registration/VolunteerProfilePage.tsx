@@ -19,7 +19,7 @@ const VolunteerProfilePage: React.FC = () => {
 
   useEffect(() => {
     if (!currentMember) {
-      navigate('/registration/signup');
+      navigate('/microsite/registration/signup');
     }
   }, [currentMember, navigate]);
 
@@ -97,7 +97,7 @@ const VolunteerProfilePage: React.FC = () => {
       });
 
       // Go to entity registration next
-      navigate('/registration/entity');
+      navigate('/microsite/registration/entity');
     } catch (err: any) {
       setError(err.message || 'Failed to create volunteer profile');
     } finally {
@@ -106,7 +106,7 @@ const VolunteerProfilePage: React.FC = () => {
   };
 
   const handleSkip = () => {
-    navigate('/registration/entity');
+    navigate('/microsite/registration/entity');
   };
 
   if (!currentMember) return null;

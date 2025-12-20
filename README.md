@@ -173,12 +173,12 @@ The application will be available at `http://localhost:5173/`
 | `/` | Redirects to `/hub` |
 | `/hub` | ForkTheCity hub/landing page |
 | `/microsite` | Demo microsite template |
-| `/login` | Member login |
-| `/registration/signup` | Member registration (Step 1) |
-| `/registration/volunteer` | Volunteer profile setup (Step 2) |
-| `/registration/entity` | Organization/business registration (Step 3) |
-| `/posts/create` | Create new post with categories |
-| `/posts/:postId` | View post details and responses |
+| `microsite/login` | Member login |
+| `microsite/registration/signup` | Member registration (Step 1) |
+| `microsite/registration/volunteer` | Volunteer profile setup (Step 2) |
+| `microsite/registration/entity` | Organization/business registration (Step 3) |
+| `microsite/posts/create` | Create new post with categories |
+| `microsite/posts/:postId` | View post details and responses |
 
 ### Build for Production
 

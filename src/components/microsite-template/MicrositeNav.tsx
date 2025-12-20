@@ -19,7 +19,7 @@ const MicrositeNav: React.FC<MicrositeNavProps> = ({ cityName = '[City Name]' })
 
   const handleLogout = () => {
     authApi.logout();
-    navigate('/registration/signup');
+    navigate('/microsite/registration/signup');
   };
 
   return (
@@ -31,7 +31,7 @@ const MicrositeNav: React.FC<MicrositeNavProps> = ({ cityName = '[City Name]' })
           <li><a href="#projects">Projects</a></li>
           <li><a href="#volunteers">Volunteers</a></li>
           <li><a href="#funding">Funding</a></li>
-          <li><Link to="/posts/create" className="btn btn-primary btn-sm">New Post</Link></li>
+          <li><Link to="/microsite/posts/create" className="btn btn-primary btn-sm">New Post</Link></li>
         </ul>
         
         {currentMember && (
@@ -54,7 +54,7 @@ const MicrositeNav: React.FC<MicrositeNavProps> = ({ cityName = '[City Name]' })
                 </div>
                 <div className="dropdown-divider"></div>
                 <Link to="/profile" className="dropdown-item">My Profile</Link>
-                <Link to="/registration/entity" className="dropdown-item">Register Entity</Link>
+                <Link to="/microsite/registration/entity" className="dropdown-item">Register Entity</Link>
                 <div className="dropdown-divider"></div>
                 <button onClick={handleLogout} className="dropdown-item logout">
                   Logout
