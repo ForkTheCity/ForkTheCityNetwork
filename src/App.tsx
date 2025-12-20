@@ -20,16 +20,28 @@ const App: React.FC = () => {
         <Route path="/microsite" element={<MicrositePage />} />
         
         {/* Authentication */}
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="microsite/login" element={<LoginPage />} />
+
+        {/* Authentication redirect */}
+        <Route path="/login" element={<Navigate to="/microsite/login" replace />} />
         
         {/* Registration Flow */}
-        <Route path="/registration/signup" element={<MemberSignupPage />} />
-        <Route path="/registration/volunteer" element={<VolunteerProfilePage />} />
-        <Route path="/registration/entity" element={<EntityRegistrationPage />} />
+        <Route path="microsite/registration/signup" element={<MemberSignupPage />} />
+        <Route path="microsite/registration/volunteer" element={<VolunteerProfilePage />} />
+        <Route path="microsite/registration/entity" element={<EntityRegistrationPage />} />
+
+        {/* Registration Redirects */}
+        <Route path="/registration/signup" element={<Navigate to="/microsite/registration/signup" replace />} />
+        <Route path="/registration/volunteer" element={<Navigate to="/microsite/registration/volunteer" replace />} />
+        <Route path="/registration/entity" element={<Navigate to="/microsite/registration/entity" replace />} />
         
         {/* Post Management */}
-        <Route path="/posts/create" element={<CreatePostPage />} />
-        <Route path="/posts/:postId" element={<PostDetailPage />} />
+        <Route path="microsite/posts/create" element={<CreatePostPage />} />
+        <Route path="microsite/posts/:postId" element={<PostDetailPage />} />
+
+        {/* Post Management Redirects */}
+        <Route path="/posts/create" element={<Navigate to="/microsite/posts/create" replace />} />
+        <Route path="/posts/:postId" element={<Navigate to="/microsite/posts/:postId" replace />} />
       </Routes>
     </BrowserRouter>
   );
