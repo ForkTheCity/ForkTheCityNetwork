@@ -7,6 +7,7 @@ A modern web platform for civic engagement, community building, and collaborativ
 ForkTheCity is a civic technology platform that empowers communities to identify, discuss, and solve local issues collaboratively. By connecting residents, organizations, and local businesses, we create transparent, accountable pathways for civic engagement and community improvement.
 
 If this feels like a lot: start with a good first issue. You don’t need to understand everything. :)
+[How to contribute](https://github.com/ForkTheCity/ForkTheCityNetwork/blob/main/CONTRIBUTING.md)
 
 ### Problem We're Solving
 
