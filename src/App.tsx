@@ -36,8 +36,8 @@ const App: React.FC = () => {
         <Route path="/registration/entity" element={<Navigate to="/microsite/registration/entity" replace />} />
         
         {/* Post Management */}
-        <Route path="microsite/posts/create" element={<CreatePostPage />} />
-        <Route path="microsite/posts/:postId" element={<PostDetailPage />} />
+        <Route path="/microsite/posts/create" element={<CreatePostPage />} />
+        <Route path="/microsite/posts/:postId" element={<PostDetailPage />} />
 
         {/* Post Management Redirects */}
         <Route path="/posts/create" element={<Navigate to="/microsite/posts/create" replace />} />

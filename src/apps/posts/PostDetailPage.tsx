@@ -36,6 +36,8 @@ const PostDetailPage: React.FC = () => {
       navigate('/microsite');
       return;
     }
+ 
+    
     setPost(postData);
 
     // Load responses
