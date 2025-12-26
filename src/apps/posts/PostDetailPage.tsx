@@ -21,7 +21,7 @@ const PostDetailPage: React.FC = () => {
 
   useEffect(() => {
     if (!currentMember) {
-      navigate('/registration/signup');
+      navigate('/microsite/registration/signup');
       return;
     }
 
@@ -36,6 +36,8 @@ const PostDetailPage: React.FC = () => {
       navigate('/microsite');
       return;
     }
+ 
+    
     setPost(postData);
 
     // Load responses

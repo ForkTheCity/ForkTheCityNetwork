@@ -59,9 +59,9 @@ const MemberSignupPage: React.FC = () => {
 
       // Redirect based on volunteer preference
       if (formData.wantsToVolunteer) {
-        navigate('/registration/volunteer');
+        navigate('/microsite/registration/volunteer');
       } else {
-        navigate('/registration/entity');
+        navigate('/microsite/registration/entity');
       }
     } catch (err: any) {
       setError(err.message || 'Failed to create account. Please try again.');
@@ -164,7 +164,7 @@ const MemberSignupPage: React.FC = () => {
         </form>
 
         <div className="registration-footer">
-          <p>Already have an account? <a href="/login">Sign in</a></p>
+          <p>Already have an account? <a href="/microsite/login">Sign in</a></p>
         </div>
       </div>
 

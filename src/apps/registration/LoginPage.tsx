@@ -94,7 +94,7 @@ const LoginPage: React.FC = () => {
         </form>
 
         <div className="registration-footer">
-          <p>Don't have an account? <Link to="/registration/signup">Sign up</Link></p>
+          <p>Don't have an account? <Link to="/microsite/registration/signup">Sign up</Link></p>
         </div>
       </div>
     </div>

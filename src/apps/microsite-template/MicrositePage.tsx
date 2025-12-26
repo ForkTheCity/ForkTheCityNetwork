@@ -25,7 +25,7 @@ const MicrositePage: React.FC = () => {
 
     // Redirect to signup if not authenticated
     if (!authenticated) {
-      navigate('/registration/signup');
+      navigate('/microsite/registration/signup');
     }
   }, [navigate]);
 

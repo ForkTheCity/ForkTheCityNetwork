@@ -31,7 +31,7 @@ const CreatePostPage: React.FC = () => {
 
   useEffect(() => {
     if (!currentMember) {
-      navigate('/registration/signup');
+      navigate('/microsite/registration/signup');
       return;
     }
 
@@ -141,7 +141,7 @@ const CreatePostPage: React.FC = () => {
       });
 
       // Redirect to post detail or microsite
-      navigate(`/posts/${post.id}`);
+      navigate(`/microsite/posts/${post.id}`);
     } catch (err: any) {
       setError(err.message || 'Failed to create post');
     } finally {

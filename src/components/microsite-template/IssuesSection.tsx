@@ -101,7 +101,7 @@ const PostsSection: React.FC = () => {
         {filteredPosts.length === 0 ? (
           <div className="no-posts">
             <p>No posts yet in this category. Be the first to create one!</p>
-            <Link to="/posts/create" className="btn btn-primary">
+            <Link to="microsite/posts/create" className="btn btn-primary">
               Create First Post
             </Link>
           </div>
@@ -110,7 +110,7 @@ const PostsSection: React.FC = () => {
             {filteredPosts.map((post) => (
               <Link 
                 key={post.id} 
-                to={`/posts/${post.id}`}
+                to={`/microsite/posts/${post.id}`}
                 className={`issue-card card-dynamic animate-on-scroll animate-fade-up ${sectionVisible ? 'visible' : ''}`}
               >
                 <div className="issue-header">
